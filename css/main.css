@@ -1,0 +1,81 @@
+.box {
+    padding: 10px;
+    border: solid 2px #dedede;
+    float: left;
+    margin:10px;
+}
+
+.box h3 {
+
+}
+
+.box a {
+    margin-right: 10px;
+}
+
+.box ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    height:200px
+}
+
+.box ul li {
+    display: block;
+    margin-right: 10px;
+    float: left;
+}
+
+.box ul li:last-child {
+    margin-right: 0px;
+}
+
+.box.false{
+    background: #FFCCCC;
+}
+.box.true {
+    background: #CCFF99;
+}
+
+
+.box ul li .fill {
+    width: 30px;
+    height: 0px;
+    background: #333;
+    color: blue;
+}
+
+.message {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.message a {
+    color: #fff;
+}
+
+.info {
+    background: blue;
+    color: white;
+}
+
+.serious {
+    background: red;
+    color: white;
+}
+
+.warning {
+    background: orange;
+    color: white;
+}
+
+.repair {
+    background: #333;
+    color: white;
+}
+
+.success {
+    background: green;
+    color: white;
+}
