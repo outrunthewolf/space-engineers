@@ -71,7 +71,7 @@ function fix_item(e) {
     document.addEvent('second', function() {
         ++zx;
         var repair_time = (broken_item.repair_time / parent_item.engineer_count);
-        message.innerHTML = item + " under repair <br />" + Math.abs(zx - broken_item.repair_time);
+        message.innerHTML = item + " under repair (" + repair_time.toFixed(2) + ")<br />" + Math.abs(zx);
 
         if(zx >= repair_time) {
             repair_damage(parent_item, broken_item.damage);

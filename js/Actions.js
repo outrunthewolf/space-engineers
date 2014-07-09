@@ -1,6 +1,36 @@
 var XP = 0;
 
 
+
+var missions = {
+    1: {
+        name: "",
+        length: 2,
+        success_params: {
+            weapons: {
+                "online": true
+            },
+            life_support: {
+                "online": true
+            }
+        }
+    },
+    2: {
+        name: "",
+        length: 10,
+        success_params: {
+            shields: {
+                online: true
+            },
+            life_support: {
+                online: true
+            }
+        },
+    }
+}
+
+
+
 // Register an event to capture messages
 function register_flash_messages() {
 
@@ -20,4 +50,42 @@ function register_flash_messages() {
         // Inject into the container
         message.inject(messages[0], 'top');
     });
+}
+
+
+
+// Create mission
+function create_mission() {
+
+}
+
+function accept_mission(n) {
+    //console.log('accepted mission: ' + n);
+    //console.log(missions[n]);
+
+    var c = 0;
+    document.addEvent('second', function() {
+        ++c;
+        if(c == missions[n].length) {
+            Object.each(missions[n].success_params, function(v, k) {
+                Object.each(v, function(a, b) {
+                    var sys = system[k];
+
+                    //console.log(b);
+                    console.log(sys[b] == a);
+
+                //    console.log(system[k][b] == a);
+
+                })
+            })
+        }
+    });
+}
+
+function mission_success() {
+
+}
+
+function mission_fail() {
+
 }
