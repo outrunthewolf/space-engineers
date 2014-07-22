@@ -89,3 +89,9 @@ function mission_success() {
 function mission_fail() {
 
 }
+
+
+
+1.000
+0.100
+0.05
