@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+<!-- Main Holder -->
+<div id="holder"></div>
+
+<!-- Script data -->
+<script src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+<script type="text/javascript" src="js/systems/System.js"></script>
+<script type="text/javascript" src="js/Main.js"></script>
+
+<!-- Initilaise all the things -->
+<script type="text/javascript">
+
+	window.addEvent('domready', function() {
+		var main = new Main();
+		main.init();
+
+		$$('.add_power').addEvent('click', function() {
+			main.render_array.shields.addPower();
+		});
+
+		$$('.remove_power').addEvent('click', function() {
+			main.render_array.shields.removePower();
+		});
+
+	});
+
+</script>
+
+<a class='btn add_power' href='javascript:void(0)'>++</a>
+<a class='btn remove_power' href='javascript:void(0)'>++</a>
+
+</body>
+</html>

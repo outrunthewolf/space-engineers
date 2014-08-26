@@ -33,11 +33,13 @@ function init() {
     holder.innerHTML += spares;
     */
 
-    // Create the various boxes
+    // Loop through all systems and build them
     for(var i in system) {
+
+        // Create the actual interface
         var html = "<div class='box " + i + "'><h3>" + system[i].title + "</h3>" +
-                        "<a class='add_" + i + "' href='javascrip:void(0)'>++</a>" +
-                        "<a class='remove_" + i + "' href='javascript:void(0)'>--</a>" +
+                        "<a class='btn add_" + i + "' href='javascrip:void(0)'>++</a>" +
+                        "<a class='btn remove_" + i + "' href='javascript:void(0)'>--</a>" +
                         "<ul>" +
                             "<li>Power<div class='fill power'>" + system[i].power + "</div></li>" +
                             "<li>Output<div class='fill output'></div></li>" +
@@ -53,9 +55,11 @@ function init() {
                         "<div class='r-queue'></div>"
                     "</div>";
         holder.innerHTML += html;
+
     }
 
     // Add all power click events
+ 
     $$(".add_shields").addEvent('click', function() {
         add_power(system.shields);
     });
@@ -68,6 +72,7 @@ function init() {
     $$(".add_engines").addEvent('click', function() {
         add_power(system.engines);
     });
+
 
     // Add engineer click events
     $$(".add_eng_shields").addEvent('click', function() {

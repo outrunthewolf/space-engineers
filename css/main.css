@@ -1,3 +1,14 @@
+body {
+    background: #066dab; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover, #066dab 0%, #0e023f 97%, #050303 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#066dab), color-stop(97%,#0e023f), color-stop(100%,#050303)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover, #066dab 0%,#0e023f 97%,#050303 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover, #066dab 0%,#0e023f 97%,#050303 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover, #066dab 0%,#0e023f 97%,#050303 100%); /* IE10+ */
+background: radial-gradient(ellipse at center, #066dab 0%,#0e023f 97%,#050303 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066dab', endColorstr='#050303',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
 .box {
     padding: 10px;
     border: solid 2px #dedede;
